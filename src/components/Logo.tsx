@@ -3,9 +3,10 @@ import React from 'react'
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg'
   className?: string
+  text?: string
 }
 
-export const Logo: React.FC<LogoProps> = ({ size = 'md', className = '' }) => {
+export const Logo: React.FC<LogoProps> = ({ size = 'md', className = '', text = 'Nutri APP' }) => {
   const iconSizes = {
     sm: 'w-7 h-7',
     md: 'w-9 h-9',
@@ -37,7 +38,7 @@ export const Logo: React.FC<LogoProps> = ({ size = 'md', className = '' }) => {
       </div>
       <div className="flex flex-col">
         <span className={`${textSizes[size]} font-extrabold text-slate-800 tracking-tight flex items-center`}>
-          Nutriens
+          {text}
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 ml-0.5 mt-1 inline-block"></span>
         </span>
       </div>
